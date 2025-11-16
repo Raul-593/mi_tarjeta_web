@@ -1,0 +1,76 @@
+/* Estilos base para index.html */
+/* Creacion de Variables */
+:root{
+	--bg: #f5f7fb;
+	--card: #ffffff;
+	--text: #222428;
+	--muted: #55606a;
+	--primary-1: #6c63ff;
+	--primary-2: #3a8dff;
+	--radius: 12px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+	margin:0;
+	padding:2rem;
+	font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+	background-color:var(--bg);
+	color:var(--text);
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+/* Contenedor principal */
+body > div{
+	width:100%;
+	max-width:820px;
+	background:var(--card);
+	padding:2rem;
+	border-radius:var(--radius);
+	box-shadow:0 8px 24px rgba(35,41,47,0.07);
+}
+
+h1{
+	margin:0 0 0.5rem 0;
+	font-size:1.6rem;
+}
+
+p{
+	margin:0 0 1.25rem 0;
+	line-height:1.6;
+	color:var(--muted);
+}
+
+/* Botón */
+button{
+	appearance:none;
+	-webkit-appearance:none;
+	display:inline-block;
+	background:linear-gradient(90deg,var(--primary-1),var(--primary-2));
+	color:#fff;
+	border:0;
+	padding:0.6rem 1rem;
+	border-radius:8px;
+	font-size:1rem;
+	cursor:pointer;
+	transition:transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+}
+
+button:hover{transform:translateY(-3px); box-shadow:0 10px 24px rgba(58,141,255,0.18)}
+button:active{transform:translateY(-1px)}
+button:focus{outline:3px solid rgba(108,99,255,0.16); outline-offset:2px}
+
+/* Pequeñas pantallas */
+@media (max-width:600px){
+	body{padding:1rem}
+	body > div{padding:1rem}
+	h1{font-size:1.25rem}
+	button{width:100%; padding:0.75rem}
+}
+
+/* Mejoras de accesibilidad */
+button:focus-visible{box-shadow:0 0 0 4px rgba(58,141,255,0.12)}
+
