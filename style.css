@@ -23,6 +23,27 @@ body{
 	justify-content:center;
 }
 
+/* ===== Imagen ===== */
+.img-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.img-container img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--primary-1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  image-rendering: crisp-edges;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  filter: contrast(1.05) brightness(1.02) saturate(1.1);
+}
+
+
 /* Contenedor principal */
 body > div{
 	width:100%;
